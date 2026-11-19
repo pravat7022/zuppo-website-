@@ -1,81 +1,41 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Discover shopping platforms in one place with ZUPPO.">
-  <meta name="theme-color" content="#101d3a">
-  <title>ZUPPO — Every Store. One Destination.</title>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Discover shopping, food, travel and service platforms in one place with ZUPPO.">
+  <meta name="theme-color" content="#101d3a"><title>ZUPPO — Every Platform. One Destination.</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="site-header">
-    <a class="brand" href="#" aria-label="ZUPPO home">
-      <span class="brand-mark">Z</span><span>ZUPPO</span>
-    </a>
-    <button class="menu-button" id="menuButton" aria-label="Toggle menu" aria-expanded="false">☰</button>
-    <nav id="mainNav">
-      <a href="#categories">Categories</a>
-      <a href="#platforms">Platforms</a>
-      <a href="#about">About</a>
-    </nav>
-  </header>
-
-  <main>
-    <section class="hero">
-      <div class="eyebrow">DISCOVER • COMPARE • EXPLORE</div>
-      <h1>Every Store.<br><span>One Destination.</span></h1>
-      <p>Find shopping platforms from one convenient place. Explore stores and continue shopping on their official websites.</p>
-      <form class="search" id="searchForm" role="search">
-        <span aria-hidden="true">⌕</span>
-        <input id="searchInput" type="search" placeholder="Search platforms or categories..." aria-label="Search platforms or categories">
-        <button type="submit">Search</button>
-      </form>
-      <div class="hero-note">A simpler way to discover online shopping.</div>
-    </section>
-
-    <section class="section" id="categories">
-      <div class="section-heading">
-        <div><div class="eyebrow">FIND YOUR INTEREST</div><h2>Explore categories</h2></div>
-        <button class="text-button" id="clearFilter">View all</button>
-      </div>
-      <div class="category-grid" id="categoryGrid">
-        <button class="category active" data-category="All"><span>✦</span>All platforms</button>
-        <button class="category" data-category="General Shopping"><span>🛍️</span>General shopping</button>
-        <button class="category" data-category="Fashion & Clothing"><span>👗</span>Fashion & clothing</button>
-        <button class="category" data-category="Beauty & Cosmetics"><span>💄</span>Beauty & cosmetics</button>
-        <button class="category" data-category="Grocery & Daily Needs"><span>🛒</span>Grocery & daily needs</button>
-        <button class="category" data-category="Electronics & Mobiles"><span>📱</span>Electronics & mobiles</button>
-        <button class="category" data-category="Furniture & Home Decor"><span>🛋️</span>Furniture & home</button>
-        <button class="category" data-category="Baby & Kids"><span>🧸</span>Baby & kids</button>
-        <button class="category" data-category="Footwear"><span>👟</span>Footwear</button>
-        <button class="category" data-category="Watches & Accessories"><span>⌚</span>Watches & accessories</button>
-        <button class="category" data-category="Eyewear"><span>🕶️</span>Eyewear</button>
-        <button class="category" data-category="Food & Delivery"><span>🍔</span>Food & delivery</button>
-        <button class="category" data-category="Travel & Lifestyle"><span>✈️</span>Travel & lifestyle</button>
-      </div>
-    </section>
-
-    <section class="section platforms-section" id="platforms">
-      <div class="section-heading">
-        <div><div class="eyebrow">YOUR SHOPPING DIRECTORY</div><h2>Explore platforms</h2><p class="section-subtitle" id="resultCount">Discover popular platforms.</p></div>
-      </div>
-      <div class="platform-grid" id="platformGrid" aria-live="polite"></div>
-      <p class="empty-state" id="emptyState" hidden>No platforms found. Try another search.</p>
-    </section>
-
-    <section class="about section" id="about">
-      <div class="about-icon">Z</div>
-      <div><div class="eyebrow">ABOUT ZUPPO</div><h2>One place to discover stores.</h2><p>ZUPPO is a shopping platform directory. We help you find online stores and take you to their official websites. Purchases, payments and deliveries are handled by the store you choose.</p></div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="ad-label">ADVERTISEMENT</div>
-    <div class="ad-space">Advertisement space</div>
-    <div class="footer-bottom"><a class="brand footer-brand" href="#"><span class="brand-mark">Z</span><span>ZUPPO</span></a><span>Discover more. Shop on official stores.</span><span>© <span id="year"></span> ZUPPO</span></div>
-    <p class="disclaimer">ZUPPO is an independent directory and is not affiliated with the listed platforms unless stated. Brand names belong to their respective owners.</p>
-  </footer>
-  <script src="script.js"></script>
-</body>
-</html>
+<header class="site-header">
+  <a class="brand" href="index.html" aria-label="ZUPPO home"><span class="brand-mark">Z</span><span>ZUPPO</span></a>
+  <nav id="mainNav"><a href="#categories">Categories</a><a href="#platforms">Platforms</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+  <div class="account-area"><button class="account-button" id="accountButton">Login / Sign Up</button><div class="account-menu" id="accountMenu" hidden><span id="accountEmail"></span><button id="logoutButton">Log out</button></div></div>
+  <button class="menu-button" id="menuButton" aria-label="Toggle menu" aria-expanded="false">☰</button>
+</header>
+<main>
+  <section class="hero"><div class="eyebrow">DISCOVER • COMPARE • EXPLORE</div><h1>Every Platform.<br><span>One Destination.</span></h1><p>Discover shopping, food, travel, transport and more. Choose a platform and continue on its official website.</p>
+    <form class="search" id="searchForm" role="search"><span aria-hidden="true">⌕</span><input id="searchInput" type="search" placeholder="Search platforms or categories..." aria-label="Search platforms or categories"><button type="submit">Search</button></form><div class="hero-note">A simpler way to discover online platforms.</div>
+  </section>
+  <section class="section" id="categories"><div class="section-heading"><div><div class="eyebrow">FIND WHAT YOU NEED</div><h2>Explore categories</h2></div><button class="text-button" id="clearFilter">View all</button></div>
+    <div class="category-grid" id="categoryGrid">
+      <button class="category active" data-category="All">All</button><button class="category" data-category="Shopping">Shopping</button><button class="category" data-category="Fashion">Fashion</button><button class="category" data-category="Grocery">Grocery</button><button class="category" data-category="Food">Food</button><button class="category" data-category="Ride & Transport">Ride &amp; Transport</button><button class="category" data-category="Travel & Hotels">Travel &amp; Hotels</button><button class="category" data-category="Electronics">Electronics</button><button class="category" data-category="Beauty">Beauty</button><button class="category" data-category="Home & Furniture">Home &amp; Furniture</button><button class="category" data-category="Footwear">Footwear</button><button class="category" data-category="Watches & Accessories">Watches &amp; Accessories</button><button class="category" data-category="Baby & Kids">Baby &amp; Kids</button><button class="category" data-category="Eyewear">Eyewear</button><button class="category" data-category="Health & Pharmacy">Health &amp; Pharmacy</button><button class="category" data-category="Education">Education</button><button class="category" data-category="Sports & Fitness">Sports &amp; Fitness</button>
+    </div>
+  </section>
+  <section class="section platforms-section" id="platforms"><div class="section-heading"><div><div class="eyebrow">YOUR PLATFORM DIRECTORY</div><h2>Explore platforms</h2><p class="section-subtitle" id="resultCount">Discover useful platforms.</p></div></div><div class="platform-grid" id="platformGrid" aria-live="polite"></div><p class="empty-state" id="emptyState" hidden>No platforms found. Try another search.</p></section>
+  <section class="about section" id="about"><div class="about-icon">Z</div><div><div class="eyebrow">ABOUT ZUPPO</div><h2>One place to discover platforms.</h2><p>ZUPPO is an independent directory. We help you find platforms and take you to their official websites. Purchases, payments, bookings and deliveries are handled by the platform you choose.</p></div></section>
+  <section class="section contact-section" id="contact"><div class="eyebrow">GET IN TOUCH</div><h2>Contact ZUPPO</h2><p>For questions or corrections to a listing, email <a href="mailto:hello@zuppo.example">hello@zuppo.example</a>.</p><p class="small-note">Replace this example email address with your real support email before publishing.</p></section>
+</main>
+<footer class="site-footer">
+  <div class="ad-label">ADVERTISEMENT</div><div class="ad-space" id="adSpace"><span>Advertisement space — ads are not active yet</span></div>
+  <div class="footer-bottom"><a class="brand footer-brand" href="index.html"><span class="brand-mark">Z</span><span>ZUPPO</span></a><span>Discover more. Visit official platforms.</span><span>© <span id="year"></span> ZUPPO</span></div>
+  <div class="footer-links"><a href="about.html">About</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms</a><a href="mailto:hello@zuppo.example">Contact</a></div>
+  <p class="disclaimer">ZUPPO is an independent directory and is not affiliated with the listed platforms unless stated. Brand names and logos belong to their respective owners.</p>
+</footer>
+<div class="modal-backdrop" id="authModal" hidden><section class="auth-modal" role="dialog" aria-modal="true" aria-labelledby="authTitle"><button class="modal-close" id="closeAuth" aria-label="Close">×</button><a class="brand modal-brand" href="index.html"><span class="brand-mark">Z</span><span>ZUPPO</span></a><h2 id="authTitle">Welcome to ZUPPO</h2><p class="auth-intro">Sign in or create an account. Browsing ZUPPO remains free without login.</p>
+  <div class="auth-tabs"><button class="auth-tab active" data-mode="login">Login</button><button class="auth-tab" data-mode="signup">Sign Up</button></div>
+  <form id="authForm"><label for="authEmail">Email</label><input id="authEmail" type="email" autocomplete="email" required placeholder="you@example.com"><label for="authPassword">Password</label><input id="authPassword" type="password" autocomplete="current-password" minlength="6" required placeholder="At least 6 characters"><button class="primary-button" type="submit" id="authSubmit">Login</button></form>
+  <div class="or-line"><span>OR</span></div><button class="google-button" id="googleButton">Continue with Google</button><p class="auth-message" id="authMessage" role="status"></p><p class="small-note">Authentication becomes active after you add your Firebase project configuration. See README.md.</p>
+</section></div>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script><script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script><script src="firebase-config.js"></script><script src="script.js"></script>
+</body></html>
