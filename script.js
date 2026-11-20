@@ -45,3 +45,17 @@ $("authForm").addEventListener("submit",async e=>{e.preventDefault();if(!firebas
 $("googleButton").addEventListener("click",async()=>{if(!firebaseAuth){setAuthMessage("Google login is not activated yet. Add your Firebase settings using the README instructions.",true);return;}try{const provider=new firebase.auth.GoogleAuthProvider();await firebaseAuth.signInWithPopup(provider);closeAuth();}catch(err){setAuthMessage(err.message,true);}});
 $("logoutButton").addEventListener("click",async()=>{if(firebaseAuth)await firebaseAuth.signOut();});
 if(window.ZUPPO_FIREBASE_CONFIG&&window.ZUPPO_FIREBASE_CONFIG.apiKey&&window.ZUPPO_FIREBASE_CONFIG.apiKey!=="YOUR_API_KEY"){try{firebase.initializeApp(window.ZUPPO_FIREBASE_CONFIG);firebaseAuth=firebase.auth();firebaseAuth.onAuthStateChanged(updateUserUI);}catch(e){console.error("Firebase setup error",e);}}else{console.info("ZUPPO login UI is ready; Firebase configuration is still required.");}
+// ZUPPO: Require login before opening homepage
+document.body.style.visibility = "hidden";
+
+if (firebaseAuth) {
+  firebaseAuth.onAuthStateChanged((user) => {
+    if (user) {
+      document.body.style.visibility = "visible";
+    } else {
+      window.location.replace("login.html");
+    }
+  });
+} else {
+  window.location.replace("login.html");
+}
